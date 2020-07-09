@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+          }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Find Your Ride</h1>
+        <p>Come travel with us.</p>
+      </div>
+
+      <h2>Search bus</h2>
+<p></p>
+
+<div>
+  <form action="search_result" method="POST">
+  {% csrf_token %}
+    
+      <div style="padding: 5px; text-align:center"></div> from </div> 
+      <input type="text" id="origin_palce" name="origin_palce" placeholder="source.."></div>
+    
+  
+      <label for="last_name">destination</label>
+      <input type="text" id="destination_place" name="destination_place" placeholder="endpoint">
+  
+      <label for="user_name">date</label>
+      <input type="date" id="journey_date" name="journey_date">
+   
+      
+  
+    <input type="submit" value="Submit">
+  
+  </form>
+</div>
+
+
+
+
+
+
+</body>
+</html>

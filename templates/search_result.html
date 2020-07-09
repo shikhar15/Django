@@ -1,0 +1,10 @@
+{% for busrecord in bus_records %}
+ <br> busId : {{busrecord.id}} |
+ bus number : {{busrecord.bus_number}} |
+ bus start place : {{busrecord.origin_place}} |
+ bus destination : {{busrecord.destination_place}} |
+ bus type : {{busrecord.bus_type}} |
+ Journey date : {{busrecord.journey_date}} |
+ Departure time : {{busrecord.depature_time}} |
+
+{% endfor %}
