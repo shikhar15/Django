@@ -17,7 +17,7 @@ def login(request):
             return redirect('/')
         else:
             messages.info(request,'Invalid Credentials')
-            return redirect('register.html')
+            return redirect('login')
 
     else:
         return render(request,'login.html')
@@ -44,7 +44,7 @@ def register(request):
             else:
                 user =User.objects.create_user(username=user_name ,password=password1 ,email=email ,first_name=first_name ,last_name =last_name)
                 user.save();
-                return redirect('login.html')
+                return redirect('login')
         else:
             messages.info(request,"password not matching")
             return redirect('register')    
@@ -52,3 +52,8 @@ def register(request):
 
     else:
         return render(request, 'register.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
