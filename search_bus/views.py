@@ -17,7 +17,7 @@ def search_result(request):
             bus_records = details.objects.filter(origin_place=start_place , destination_place=end_place , journey_date=date)
             return render(request, 'search_result.html',{'bus_records':bus_records})
         else:
-            messages.info(request,'NO BUS FOUND')
+            messages.info(request,'NO BUS AVAILABLE')
             return redirect('search_bus')
                
     

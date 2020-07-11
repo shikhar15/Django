@@ -75,7 +75,7 @@ input[type=submit]:hover {
   background-color: #333;
 }
 .topnav a {
-  float: right;
+  float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -99,7 +99,7 @@ input[type=submit]:hover {
 </div>
 
 <div class="topnav">
-  <a href="/">BACK HOME</a></div>
+  <a href="/">HOME</a></div>
 
 <h2 style="text-align: center;">Rgistration Form</h2>
 <p></p>
@@ -177,10 +177,9 @@ input[type=submit]:hover {
 </div>
 
 <div class="center">
-    {% for message in messages %}
-    <h3 class="center"> {{ message }} </h3>
-    {% endfor %}
+  {% for message in messages %}
+  <h3 style="text-align: center;"> {{ message }} </h3>
+  {% endfor %}
 </div> 
-
 </body>
 </html>
