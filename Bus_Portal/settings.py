@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'driver_portal.apps.DriverPortalConfig',
     'search_bus.apps.SearchBusConfig',
     'django.contrib.admin',
     'django.contrib.auth',

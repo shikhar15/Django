@@ -99,14 +99,24 @@ input[type=submit]:hover {
 </div>
 
 <div class="topnav">
-  <a href="driver_portal">Return</a></div>
+  <a href="driver_portal"><<< Driver Portal</a></div>
 
 <h2 style="text-align: center;">Driver Rgistration Form</h2>
 <p></p>
 
 <div class="container">
-  <form action="register" method="POST">
+  <form action="driver_register" method="POST">
   {% csrf_token %}
+  <div class="center">  
+    <div class="row">
+      <div class="align" >
+        <label for="bus_no">Bus Number</label>
+      </div>
+      <div class="align">
+        <input type="text" id="bus_no" name="bus_no" placeholder="Bus number which you drive..">
+      </div>
+    </div>
+  </div>
   <div class="center">  
   <div class="row">
     <div class="align" >
