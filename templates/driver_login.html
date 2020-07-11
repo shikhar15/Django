@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  text-align: center;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  margin:inherit;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #aaaaaae3;
+  padding: 20px;
+}
+
+.center {
+  border-radius: 25px;
+  margin: auto;
+  width: 60%;
+  border: 3px solid gray;
+  padding: 10px;
+}
+
+.centerbutton {
+  border-radius: 25px;
+  margin: auto;
+  width: 60%;
+  border:3px;
+  padding: 10px;
+}
+
+.align{
+  text-align: center;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}       
+
+</style>
+</head>
+<body bgcolor="lightgray">
+
+<div class="header">
+  <h1>BHARAT BUS</h1>
+  <p>Come travel with us.</p>
+</div>
+
+<div class="topnav">
+  <a href="driver_portal">Return</a></div>
+
+<h2 style="text-align: center;">Driver Login</h2>
+<p></p>
+
+<div class="container">
+  <form action="login" method="POST">
+  {% csrf_token %}
+  
+<div class="center">  
+  <div class="row">
+    <div class="align">
+      <label for="user_name">User Name</label>
+    </div>
+    <div class="align">
+      <input type="text" id="user_name" name="user_name" placeholder="Your user name..">
+    </div>
+  </div>
+</div>
+
+<div class="center">  
+  <div class="row">
+    <div class="align">
+      <label for="password">Password</label>
+    </div>
+    <div class="align">
+      <input type="password" id="password" name="password">
+    </div>
+  </div>
+</div>
+
+<div class="centerbutton">  
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+</div>
+  </form>
+</div>
+
+<div class="center">
+    {% for message in messages %}
+    <h3 style="text-align: center;"> {{ message }} </h3>
+    {% endfor %}
+</div> 
+
+</body>
+</html>

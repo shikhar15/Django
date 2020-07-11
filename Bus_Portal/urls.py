@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('search_bus/', include('search_bus.urls')),
     path('user_accounts/', include('user_accounts.urls')),
+    path('driver_portal/', include('driver_portal.urls')),
 ]
