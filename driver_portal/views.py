@@ -50,10 +50,12 @@ def driver_login(request):
 
         if driver.objects.filter(driver_username=user_name ,driver_password=password).exists():
             driver_records = driver.objects.filter(driver_username=user_name ,driver_password=password)
+            for entry in driver_records:
+                driver_FirstName = entry.driver_first_name
             for record in driver_records:
                 bus_no = record.bus_number
             bus_record = details.objects.filter(bus_number=bus_no)
-            return render(request, 'driver_result.html',{'driver_records':driver_records, 'bus_record':bus_record })
+            return render(request, 'driver_result.html',{'driver_records':driver_records, 'bus_record':bus_record, 'driver_FirstName':driver_FirstName })
             
         else:
             messages.info(request,'Invalid Credentials')

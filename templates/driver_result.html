@@ -104,8 +104,13 @@
     </div>
 
     <div class="topnav">
-        <a style="float: left;" > Welcome {{driver_records.driver_first_name}}</a>
+        <a style="float: left;" > Welcome {{driver_FirstName}}</a>
         <a style="float: right;" href="driver_login"> <<< Driver Login</a>
+    </div>
+    
+    <div class="header">
+      <h2>Dear {{driver_FirstName}}, below are the details of the bus you are driving with date and time</h2>
+      
     </div>
 
 
@@ -131,7 +136,7 @@
       <div class="center">  
         <div class="row">
           <div class="align">
-            <div>bus number : {{driver.bus_number}} </div>
+            <div>Bus number : {{driver.bus_number}} </div>
           </div>  
         </div>
       </div>
@@ -152,22 +157,6 @@
         </div>
       </div>
 
-      <div class="center">  
-        <div class="row">
-          <div class="align">
-            <div>User Name : {{driver.driver_username}}  </div>
-          </div>  
-        </div>
-      </div>
-
-      <div class="center">  
-        <div class="row">
-          <div class="align">
-            <div>E-mail : {{driver.driver_email}}  </div>
-          </div>  
-        </div>
-      </div>
-
       
 {% endfor %}
 
@@ -176,7 +165,7 @@
 <div class="center">  
     <div class="row">
       <div class="align">
-        <div> busId : {{bus.id}} </div>
+        <div> BusId : {{bus.id}} </div>
       </div>  
     </div>
   </div>
@@ -184,7 +173,7 @@
   <div class="center">  
     <div class="row">
       <div class="align">
-        <div> bus start place : {{bus.origin_place}}  </div>
+        <div> Bus start place : {{bus.origin_place}}  </div>
       </div>  
     </div>
   </div>
@@ -192,7 +181,7 @@
   <div class="center">  
     <div class="row">
       <div class="align">
-        <div>bus destination : {{bus.destination_place}} </div>
+        <div>Bus destination : {{bus.destination_place}} </div>
       </div>  
     </div>
   </div>
@@ -200,7 +189,7 @@
   <div class="center">  
     <div class="row">
       <div class="align">
-        <div>bus type : {{bus.bus_type}}  </div>
+        <div>Bus type : {{bus.bus_type}}  </div>
       </div>  
     </div>
   </div>
