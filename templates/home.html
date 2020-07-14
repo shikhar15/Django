@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,14 +66,14 @@ body {
 .img {
  
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Add a card effect for articles */
 .card {
   background-color: lightgrey;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 /* Clear floats after the columns */
@@ -116,35 +118,36 @@ body {
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <img src="Screenshot_20160813-143351_1.jpg">
-      <p>Some text..</p>
-      <p>description</p>
+      <h2>BEST BUSES WITH BEST MAINTAINANCE</h2>
+      <h5>We dont compromise with quality of vehicle</h5>
+      <div class="img" style="height:340px;"><img src="{% static 'images/images.jpeg' %}" width="1200" alt=""></div>
+      <p>The best maintained and reliable buses just for you</p>
+      <p>Never waste your precious time in vehicle faults</p>
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="img" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>description</p>
+      <h2>ENROUT TO EVERYWHERE</h2>
+      <h5>Every major city covered with routs and destinations of your choice</h5>
+      <div class="img" style="height:330px;"><img src="{% static 'images/images3.jpeg' %}" width="1200" height="320" alt=""></div>
+      <p>We have the biggest network of travel routes and destination</p>
+      <p>From Kashmir to Kanyakumari we will drop you anywhere in between</p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>About Us</h2>
-      <div class="img" style="height:100px;">Image</div>
-      <p>description</p>
+      <div class="img" style="height:120px;"><img src="{% static 'images/logo.png' %}" width="350" height="120" alt=""></div>
+      <p>Bharat Bus Pvt Lmt </p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="img"><p>Image</p></div>
-      <div class="img"><p>Image</p></div>
-      <div class="img"><p>Image</p></div>
+      <h3>Clean, Hygenic and Comfortable interior</h3>
+      <div class="img"><p><img src="{% static 'images/images1.jpeg' %}" width="350" height="250" alt=""></p></div>
+      <div class="img"><p><img src="{% static 'images/images2.jpeg' %}" width="350" height="250" alt=""></p></div>
     </div>
     <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3>Follow Us</h3>
+      <p>Facebook/BharatBus</p>
+      <p>InstaBharatBus</p>
+      
     </div>
   </div>
 </div>

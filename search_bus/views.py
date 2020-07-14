@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import details
+from django.contrib.auth.models import User , auth
+
 # Create your views here.
 
 def search_bus(request):
@@ -22,4 +24,16 @@ def search_result(request):
                
     
     else:
-        return redirect('search_bus')
+        return redirect('search_bus') 
+
+def book_bus(request):
+    return render(request,'book_bus.html')
+
+def book_complete(request):
+    if request.method == 'POST':
+        buscol = request.POST['column']
+        busrow = request.POST['row']
+        seat = buscol+busrow
+        return render(request,'book_complete.html',{'seat':seat})
+    else:
+        return redirect(book_bus)
