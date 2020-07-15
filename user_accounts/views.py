@@ -32,7 +32,7 @@ def register(request):
         email = request.POST['email']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
-
+    
         if password1 == password2:
             if User.objects.filter(username=user_name).exists():
                 messages.info(request,'Username Already Taken')

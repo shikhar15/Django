@@ -102,7 +102,7 @@ input[type=submit]:hover {
 <div class="topnav">
   <a style="float: right;" href="/"><<< HOME</a></div>
 
-<h2 style="text-align: center;">Select Seat</h2>
+<h2 style="text-align: center;">Booking Complete</h2>
 <p></p>
 
 <div class="container"><img src="{% static 'images/layout.jpg' %}" width="960" alt="">
@@ -114,7 +114,7 @@ input[type=submit]:hover {
     <div class="row">
       <div class="align">
         <label for="column">Your Seat has been booked</label>
-        <h1 style="text-align: center;"> {{ seat }} </h1>
+        <h1 style="text-align: center;"> {{ bus_column }}{{bus_row}}, {{ passenger_first_name }} {{ passenger_last_name }}, {{ passenger_age }}, {{ passenger_gender }}</h1>
       </div>
     </div>
   </div>  

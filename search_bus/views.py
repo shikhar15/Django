@@ -31,9 +31,13 @@ def book_bus(request):
 
 def book_complete(request):
     if request.method == 'POST':
-        buscol = request.POST['column']
-        busrow = request.POST['row']
-        seat = buscol+busrow
-        return render(request,'book_complete.html',{'seat':seat})
+        bus_column = request.POST['column']
+        bus_row = request.POST['row']
+        passenger_first_name = request.POST['first_name']
+        passenger_last_name = request.POST['last_name']
+        passenger_age = request.POST['age']
+        passenger_gender = request.POST['gender']
+        return render(request,'book_complete.html',{'bus_column':bus_column, 'bus_row':bus_row ,'passenger_first_name':passenger_first_name,
+                        'passenger_last_name':passenger_last_name, 'passenger_age':passenger_age, 'passenger_gender':passenger_gender})
     else:
-        return redirect(book_bus)
+        return redirect('book_bus')
