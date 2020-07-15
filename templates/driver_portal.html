@@ -65,10 +65,10 @@
 
 <div class="topnav">
     
-    {% if user.is_authenticated %}
-    <a href="">Hi {{user.first_name}}</a>
-    <a href="#">Logout</a>
-    {% else %}
+    {% if user.is_authenticated %} 
+    <a href="" style="float: left;">Hi {{user.first_name}}, please logout as user</a>
+    <a href="logout">Logout</a>
+    {% else %} 
     <a href="driver_register" style="float:left">Register</a>
     <a href="/" style="float:right">Back Home</a>
     <a href="driver_login" style="float:right">Login</a>

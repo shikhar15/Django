@@ -68,3 +68,6 @@ def driver_login(request):                                               # drive
     else:
         return render(request,'driver_login.html')          
 
+def logout(request):                      # logout operation
+    auth.logout(request)                  # predefined method used to logout
+    return redirect('/')                  # redirect to home page
